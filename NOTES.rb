@@ -3,7 +3,7 @@
 # Object oriented applications are made up of parts that interact to produce the behaviour of the whole. The parts are OBJECTS; interactions are embodied in MESSAGES that pass between them.
 
 # Object oriented applications are made up of objects and the messages that pass between them.
-# => People often focus too much on the objects, and not enough on the messages passing between them. In well designed applications, the latter ranks higher.
+# => People often focus too much on the objects, and not enough on the messages passing between them - probably because classes are more visible. In well designed applications, the latter ranks higher.
 
 # Objects are instantiated instances of abstracts classes. They have behaviours (methods) and may contain data (variables, data to which they alone control access. Objects invoke one anothers behavious by sending each other MESSAGES
 
@@ -29,4 +29,5 @@
 
 #  AGILE & Iterative Development
 #  Test Driven Development
-#
+
+# Other than that - your simplest rule of thumb should be Ockham's Razor - KEEP IT SIMPLE!
