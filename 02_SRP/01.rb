@@ -51,4 +51,5 @@ end
 puts Gear.new(52, 11).ratio
 puts Gear.new(30, 27).ratio
 
-# But what about if we have a new requirement that the size of the wheel is taken into account in our equation?
+# But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio
+# But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio
