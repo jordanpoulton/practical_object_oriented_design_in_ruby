@@ -1,4 +1,4 @@
-# Remember - direction of dependency can be reversed. You could just as easily had Wheel depending on Gear rather than Gear depending on Wheel:
+# Remember - direction of dependency can be reversed. You could just as easily have had Wheel depending on Gear rather than Gear depending on Wheel:
 
 class Gear
   attr_accessor :chainring, :cog

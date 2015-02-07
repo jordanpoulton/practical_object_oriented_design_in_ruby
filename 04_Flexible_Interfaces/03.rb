@@ -26,7 +26,7 @@
 |Customer  |----------------------------------------------------------------------------------|Customer|
 |----------| |                                                                        ^       |--------|
              |                                                                        |
-             |suitable_trips(on_date, of_difficulty, need bike)                       |*returns a Trip
+             |suitable_trips(on_date, of_difficulty, need bike)                       |*returns Trips
              |                                                                        |
 |----------|\ /      |-------------------|                                            |       |--------|
 |TripFinder|---------|for each trip found|----------------------------------------------------| Trip   |

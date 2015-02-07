@@ -23,14 +23,14 @@
 chainring = 52
 cog = 11
 ratio = chainring / cog.to_f
-puts ratio
+puts ratio # => 4.72
 # Hard gear - one turn of your feet outputs almost 5 turns of the rear wheel
 
 
 chainring = 30
 cog = 27
 ratio = chainring / cog.to_f
-puts ratio
+puts ratio # => 1.1
 # Easy gear - one turn of your feet outputs just over 1 turn of the rear wheel
 
 # If you wanted to model this interaction, you look for the NOUNS and find BiCYCLES and GEARS.
@@ -52,4 +52,4 @@ puts Gear.new(52, 11).ratio
 puts Gear.new(30, 27).ratio
 
 # But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio
-# But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio
+# But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio. How would you code this?

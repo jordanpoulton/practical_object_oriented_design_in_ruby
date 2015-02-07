@@ -40,10 +40,12 @@ puts Gear.new(52, 11, 24, 1.25).gear_inches
 
 # DEPEND ON BEHAVIOUR, NOT DATA
 # You see how in the ratio method, we don't use @chainring or @cog? We use an attr_accessor so that because we want to DEPEND on BEHAVIOUR, NOT DATA
-# By wrapping the data in an accessor method changes chainring and cog from data to behaviour, so we can refer to them as often as we want and when a change is made, we only need to make the change in one place - in it's accessor method.
+# By wrapping the data in an accessor method, we change chainring and cog from data to behaviour, so we can refer to them as often as we want and when a change is made, we only need to make the change in one place.
 
 # DON'T DEPEND ON COMPLICATED DATA STRUCTURES
 # As mentioned in line 23, our initialization will fail if we do not provide the right number of arguments, in the right order.
+
+# => How might you get around that?
 
 # Make sure your methods, like your classes, have single responsibility
 # gear_inches is unclear. It is actually saying that gear_inches are a product of the gear_ratio and the diameter of a wheel. So this method is calculating two things, and already too obscure:
@@ -69,8 +71,9 @@ class Gear
     (rim + (tire * 2))
   end
 end
-
+# Here we have isolated the code for diameter, making it clearer, wrapping it in a seperate method
 # Already you should be getting a stronger sense that a Wheel class may be necessary...
+
 class Gear
   attr_accessor :chainring, :cog, :wheel
   def initialize(chainring, cog, wheel=nil)

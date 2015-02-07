@@ -1,4 +1,4 @@
-# Here, rather than passing in a wheel, the gear class creates a new wheel using the rim and tire data that it's given on initialization.
+# Here (using the old - incorrect - methodology) rather than passing in a wheel, the gear class creates a new wheel using the rim and tire data that it's given on initialization.
 
 class Gear
   attr_accessor :chainring, :cog, :rim, :tire
@@ -41,7 +41,7 @@ puts Gear.new(52, 11, 26, 1.5).gear_inches
 
 # A class "Wheel" must exist for it to function properly
 # Gear also expects this class to respond to diameter
-# And that a Wheel is initialized with 2 arguments
+# It also expects that a Wheel is initialized with 2 arguments
 # And that their order must be 'rim, tire' and not the other way around
 
 # Any changes to wheel therefore necessarily imply a change would have to be made to Gear. This is building up TECHNICAL DEBT that makes the code confusing and hard to change or extend in the future

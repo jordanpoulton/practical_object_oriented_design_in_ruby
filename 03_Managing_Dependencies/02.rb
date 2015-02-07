@@ -1,6 +1,6 @@
 # Inject Dependencies
 
-# Rather than referencing the class Wheel from inside the Gear class, it becomes tightly coupled with it and is not reusable. In fact, all Gear needs to calculate its gear inches is to access an object that responds to DIAMETER. One day we might want to get gear inches for a motorbike or a car - for disks or cylinders perhaps, but as it is the code cannot handle such things.
+# When referencing the class Wheel from inside the Gear class, it becomes tightly coupled with it and is not reusable. In fact, all Gear needs to calculate its gear inches is to get a number from an object that responds to DIAMETER. One day we might want to get gear inches for a motorbike or a car - for disks or cylinders perhaps - but as it is the code cannot handle such things.
 
 # Gear should not know, and does not need to know, how the diameter of a wheel is calculated. It just needs to know the diameter of a wheel, and nothing more.
 
@@ -68,7 +68,7 @@ end
 
 # A HUGE red flag should be cases where an object sends messages to anything other than self
 
-# line 112!!!!
+# line 58!!!!
 
 # In these cases, you should always seek to isolate this vulnerability into it's own method so if and when it breaks, the side effects to Gear will be confined to this one wrapping method.
 

@@ -10,7 +10,7 @@
 
 # Put simply, Demeter says - "Only talk to your neighbours"
 
-# If you were to use the code above, it relies on the link between customer and bike and wheel and the method 'rotate'. A customer would need to have a bike, which would need to have a wheel, which would need to have the method 'rotate'. That's a lot of dependency. If anything were to change, the whole thing would break, and it wouldn't be obvious why.
+# If you were to use the code above, it relies on the link between customer and bike and wheel, and on wheel having the method 'rotate'. A customer would need to have a bike, which would need to have a wheel, which would need to have the method 'rotate'. That's a lot of dependency. If anything were to change, the whole thing would break, and it wouldn't be obvious why.
 
 # It would be much better to encapsulate the action at each step in the chain, so you would want to use something like:
 

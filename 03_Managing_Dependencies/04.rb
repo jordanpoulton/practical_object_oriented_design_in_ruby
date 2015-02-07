@@ -1,4 +1,4 @@
-# In some situations, you don't own the interface of the method you want to interact with. You may need to interact with a method that requires fixed order arguments, in which scenario you should wrap the interface in a module, which will isolate the external dependency:
+# In some situations you don't own the interface of the method you want to interact with, such as when using an external framework. You may need to interact with a method that requires fixed order arguments, in which scenario you should wrap the interface in a module, which will isolate the external dependency:
 
 module::SomeFramework
   class Gear

@@ -2,7 +2,7 @@
 
 # Objects communicate via their INTERFACES
 
-# If you go to a restaurant and order food, you don't tell them how to cut the vegetables and what spices to use. You just order your food and trst them to send you the food you want.
+# If you go to a restaurant and order food, you don't tell them how to cut the vegetables and what spices to use. You just order your food and trust them to send you the food you want.
 
 # The menu acts as a kind of public interface.
 
@@ -13,7 +13,7 @@
 # The methods in a public interface should:
 
 # Reveal its primary responsibility
-# Are expectd to be invoked by others
+# Are expected to be invoked by others
 # Will not change on a whim
 # Are safe for others to depend on
 # Are thoroughly documented in tests

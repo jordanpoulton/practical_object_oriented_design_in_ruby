@@ -13,7 +13,7 @@
 |--------|      |     ^  |--------|
                 |     |
                 |suitable_trips(on_date, of_difficulty, need_bike)
-                |     |
+                |     |*return a Trip
 |--------|     \ /    |  |--------|
 |  Trip  |---------------| Trip   |
 |--------|               |--------|
@@ -59,39 +59,39 @@
 |  Trip  |---------|for each bike|----------------------------------------------| Trip   |
 |--------|  bikes  |-------------|                                              |--------|
 
-# But here, trip knows way too much about what a mechanic is supposed to do... It's very procedural
+# Here, trip knows way too much about what a mechanic is supposed to do... It's very procedural
 # It would be much better just to ask the mechanic to prepare the bike, leaving the details to him
 
                                          ____________________
                                         |   clean_bikes etc  |
 |--------|                              |                   \|/                |--------|
 |Mechanic|---------------------------------------------------------------------|Mechanic|
-|--------|                         ^                           |               |--------|
-                                   |                           |
-            ___  prepare_bike(bike)|                           |*returns a Bike
-           |   |                   |                           |
-|--------| |  \ /  |-------------| |                          \|/               |--------|
-|  Trip  |---------|for each bike|----------------------------------------------| Trip   |
-|--------|  bikes  |-------------|                                              |--------|
+|--------|                           ^                           |               |--------|
+                                     |                           |
+       bikes___    prepare_bike(bike)|                           |*returns a Bike
+           |   |                     |                           |
+|--------| |  \ /    |-------------| |                          \|/               |--------|
+|  Trip  |-----------|for each bike|----------------------------------------------| Trip   |
+|--------|           |-------------|                                              |--------|
 
 
 # Now the HOW of preparing a bicycle has been ceded to Mechanic.
-# However, Trip expects to have a mechanic object, and that he will respond to the prepare_bike(bike) message.
+# However, Trip expects to have a mechanic object, and Trip also needs him to respond to the prepare_bike(bike) message.
 # This is the object's CONTEXT
-# You should keep objects as independent from context as you possibly can. It makes them easier to reuse and less dependent on other objects, more able to ollaborate with others without knowing who they are or what they do. (This, as we already know, can be achieved through dependency injection). In this instance, you would inject a mechanic into a trip to maintain context independence.
+# You should keep objects as independent from context as you possibly can. It makes them easier to reuse and less dependent on other objects, more able to collaborate with others without knowing who they are or what they do. (One of the way that this can be achieved is through dependency injection). In this instance, you would inject a mechanic into a trip to maintain context independence.
 
 
                                                          ______________
                                                         | prepare_bike |
-|--------|                             |-------------|  |             \|/               |--------|
-|Mechanic|-----------------------------|for each bike|----------------------------------|Mechanic|
-|--------|                   ^   |  /|\|-------------|                           |      |--------|
-                             |  bikes|                                           |
-           prepare_trip(self)|   |   |                                           |*returns a Trip
-                             |   |   |*returns a Bike                            |
-|--------|                   |   |   |                                          \|/|--------|
-|  Trip  |-------------------------------------------------------------------------| Trip   |
-|--------|                                                                         |--------|
+|--------|                             |-------------|  |             \|/        |--------|
+|Mechanic|-----------------------------|for each bike|---------------------------|Mechanic|
+|--------|                   ^   |  /|\|-------------|                        |  |--------|
+                             |  bikes|                                        |
+           prepare_trip(self)|   |   |                                        |*returns prepared bikes
+                             |   |   |*returns a Bike                         |
+|--------|                   |  \|/  |                                       \|/|--------|
+|  Trip  |----------------------------------------------------------------------| Trip   |
+|--------|                                                                      |--------|
 
 
 

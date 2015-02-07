@@ -1,6 +1,6 @@
 # In the following code, Trip's 'prepare' method sends the message 'prepare_bikes' to the object contained in its mechanic parameter.
 
-# Notice that the Mechanic class is not referenced - even though the name of the parameter is 'mechanic', the object containted within it could technically be any class - so long as it responds to 'prepare_bikes'
+# Notice that the Mechanic *class* is not referenced - even though the name of the parameter is 'mechanic', the object contained within it could technically be any class - so long as it responds to 'prepare_bikes'
 
 class Trip
   attr_reader :bikes, :customers, :vehicle
@@ -22,9 +22,9 @@ class Mechanic
 end
 
 # Under this model, an outside object would need to kick the whole thing off by sending 'prepare' to Trip, passing an argument along with it.
-# The prepare method doesn't necessarily need to be passed a Mechanic, but it does need to be passed an object that responds to 'prepare_bikes'
+# Be clear that you understand this statement... The prepare method doesn't *necessarily* need to be passed a Mechanic, but it does need to be passed an object that responds to 'prepare_bikes'.
 
-# Now imagine that there is a change in requirements, and the preparation of a Trip will involve a TripCoordinator and a Driver as well as a Mechanic.
+# Now imagine that there is a change in requirements, and the preparation of a Trip now involves a TripCoordinator and a Driver as well as a Mechanic.
 
 # You might write this sort of code:
 
