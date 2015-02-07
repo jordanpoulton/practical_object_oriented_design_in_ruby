@@ -1,3 +1,9 @@
+# These are my notes from reading Sandi Metz' 'Practical Object Oriented Design in Ruby'. I hope it's as useful to read as it was to write:)
+
+#=============================================================================================================
+# TL:DR: Well designed applications a constructed of small, trustworthy, self-contained objects with minimal context, clear interfaces, and injected dependencies that are inherently reusable.
+#=============================================================================================================
+
 # Object oriented design requires that you shift from thinking of the world as a collection of predefined processes to modelling the world as a series of messages that pass between objects.
 
 # Object oriented applications are made up of parts that interact to produce the behaviour of the whole. The parts are OBJECTS; interactions are embodied in MESSAGES that pass between them.
