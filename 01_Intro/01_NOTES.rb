@@ -30,9 +30,6 @@
 
 # DESIGN PATTERNS
 
-# See later :)
-
-
 #  AGILE & Iterative Development
 #  Test Driven Development
 
