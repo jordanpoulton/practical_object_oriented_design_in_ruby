@@ -71,7 +71,6 @@ class Gear
 end
 
 # Already you should be getting a stronger sense that a Wheel class may be necessary...
-
 class Gear
   attr_accessor :chainring, :cog, :wheel
   def initialize(chainring, cog, wheel=nil)
