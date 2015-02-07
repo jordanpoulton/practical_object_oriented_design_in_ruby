@@ -70,7 +70,7 @@ class Gear
   end
 end
 
-# Already you should be getting a stronger sense that a Wheel class may be necessary... SO:
+# Already you should be getting a stronger sense that a Wheel class may be necessary...
 
 class Gear
   attr_accessor :chainring, :cog, :wheel
