@@ -14,6 +14,8 @@ p String.class
 p "Jordan".class
 p String.ancestors
 
+# All subclasses must follow the 'Liskov Substitution Principle' - it should be possible for a subclass to substitute in for one of it's superclasses without causing any errors in the code. That is - all the actions you expect in a superclass should be mirrored exactly in its subclasses.
+
 # Inheritance can be seen as a form of specialization, and is usually recognized by describing an "Is a" relationship. For example, if you have an Animal class, then Mammal, Bird and Fish potentially could inherit from it. You could then have a Human inherit from the Mammal class, but it's unlikely you'd have a class 'Alien' that could inherit from any of them (even if there were some shared characteristics... Let's not get side-tracked).
 
 # In our example, RoadBike and MountainBike are specializations of Bike, so they seem to be good candidates for inheritance.
