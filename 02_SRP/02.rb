@@ -1,4 +1,4 @@
-class Gear
+™class Gear
   attr_accessor :chainring, :cog, :rim, :tire
   def initialize(chainring, cog, rim, tire)
     @chainring = chainring

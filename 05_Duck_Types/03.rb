@@ -74,3 +74,5 @@ end
 # Then you might want to take some time to think if you've got yourself a hidden duck.
 
 # We will get on to how you write good tests for ducks later.
+
+# Now - below - write the Preparable module that will serve as our Preparable duck type, and include it correctly into TripCoordinator, Mechanic and Driver classes.
