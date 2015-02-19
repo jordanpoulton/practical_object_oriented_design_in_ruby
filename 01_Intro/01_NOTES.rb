@@ -11,19 +11,19 @@
 # Object oriented applications are made up of objects and the messages that pass between them.
 # => People often focus too much on the objects, and not enough on the messages passing between them - probably because classes are more visible. In well designed applications, the latter ranks higher.
 
-# Objects are instantiated instances of abstracts classes. They have behaviours (methods) and may contain data (variables, data to which they alone control access. Objects invoke one anothers behavious by sending each other MESSAGES
+# Objects are instantiated instances of abstracts classes. They have behaviours (methods) and may contain data (variables), data to which they alone control access. Objects invoke one anothers behavious by sending each other MESSAGES
 
 # OOD is about managing DEPENDENCIES
 
-# TOOLBOX:
+# A good developer should have the following in his TOOLBOX:
 
-# SOLID
+# SOLID:
 
-# Single responsibility
-# Open-Closed
-# Liskov substitution
-# Interface segregation
-# Dependency inversion
+# S.ingle responsibility
+# O.pen-Closed
+# L.iskov substitution
+# I.nterface segregation
+# D.ependency inversion
 
 # DRY - Don't Repeat Yourself
 # LoD - Law of Demeter
