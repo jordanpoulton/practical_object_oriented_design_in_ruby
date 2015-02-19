@@ -19,9 +19,8 @@ end
 puts Gear.new(52, 11, 26, 1.5).gear_inches
 puts Gear.new(52, 11, 24, 1.25).gear_inches
 
-# NB - Our old code would have returned an error here:
-# puts Gear.new(52, 11).ratio
-# Because our new code requires two extra arguments on initialization
+# NB - Our old code would have returned an error here: puts Gear.new(52, 11).ratio
+# Because our new code requires two extra arguments on initialization - rim and tyre
 
 # BUT we should ask ourselves, already, are we violating the single responsibility principle?
 
@@ -39,11 +38,11 @@ puts Gear.new(52, 11, 24, 1.25).gear_inches
 # A note on best practise
 
 # DEPEND ON BEHAVIOUR, NOT DATA
-# You see how in the ratio method, we don't use @chainring or @cog? We use an attr_accessor so that because we want to DEPEND on BEHAVIOUR, NOT DATA
+# You see how in the ratio method, we don't use @chainring or @cog? We use an attr_accessor because we want to DEPEND on BEHAVIOUR, NOT DATA
 # By wrapping the data in an accessor method, we change chainring and cog from data to behaviour, so we can refer to them as often as we want and when a change is made, we only need to make the change in one place.
 
 # DON'T DEPEND ON COMPLICATED DATA STRUCTURES
-# As mentioned in line 23, our initialization will fail if we do not provide the right number of arguments, in the right order.
+# As mentioned in line 23, our initialization will fail if we do not provide the right number of arguments, in the right order. This makes it brittle.
 
 # => How might you get around that?
 
