@@ -1,4 +1,4 @@
-# The strategy - take an arbitrary concrete class, like Bikes, and implement the schedulable? method directly in that class. Once you have a version that works, you can refactor your wat yo a code arrangement that allows all Schedulables to share this behavious.
+# The strategy - take an arbitrary concrete class, like Bikes, and implement the schedulable? method directly in that class. Once you have a version that works, you can refactor your way to a code arrangement that allows all Schedulables to share this behaviour.
 
 class Schedule
   def scheduled?(schedulable, starting, ending)
