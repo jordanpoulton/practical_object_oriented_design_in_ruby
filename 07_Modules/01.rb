@@ -4,17 +4,17 @@
 
 # Some problems require sharing behaviour among otherwise unrelated objects. Its a role that an object plays. The 'Preparer' duck type from session 05 is such a role. Mechanic, Driver and TripCoordinator implement a prepare_trip method, which means that they can all play the Preparer role.
 
-# NB that these roles are usually two sided. Just as we have Preparers, we also have a Preparable, which, in this case, is the Trip class. It implements the Preparable interface, which includes all of hte messages taht any Preparer might expect to send to a Preparable, such as the methods 'bikes', 'customer', vehicle.
+# NB that these roles are usually two sided. Just as we have Preparers, we also have a Preparable, which, in this case, is the Trip class. It implements the Preparable interface, which includes all of the messages that any Preparer might expect to send to a Preparable, such as the methods 'bikes', 'customer', vehicle.
 
 # Modules allow us to define a named group of methods that are independent of class and can be mixed in to any object, thus allowing objects of different classes to play a common role using a single piece of code.
 
-# When am object includes a module, the methods contained therein become available via automatic message delegation, thus expanding the range of messages that the object can respond to.
+# When an object includes a module, the methods contained therein become available via automatic message delegation, thus expanding the range of messages that the object can respond to.
 
 # CASE:
 
 # At FastFeet, bikes have a minimum of one day's worth of 'downtime' needed after every trip for check and maintenance. Vehicles need 3 days between each trip, and mechanics need 4 days.
 
-#Assume that a Schedule class exists with the interface:
+# Assume that a Schedule class exists with the interface:
 
 # scheduled?(target, starting, ending)
 # add(target, starting, ending)
