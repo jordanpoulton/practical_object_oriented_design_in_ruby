@@ -1,4 +1,4 @@
-# The style variable divides Bikes into two different catergories of thing... :road and :mountain. The types share a lot of features and behaviour, but differ in a number of ways. Some of Bike's behaviour applies to all bikes, some only to road bikes and some only to mountain bikes.
+# The style variable divides Bikes into two different categories of thing... :road and :mountain. The types share a lot of features and behaviour, but differ in a number of ways. Some of Bike's behaviour applies to all bikes, some only to road bikes and some only to mountain bikes.
 
 # This is the problem that inheritance solves - that of highly related types that share common behaviour but differ along some dimension.
 
