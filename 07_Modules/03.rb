@@ -22,7 +22,7 @@ module Schedulable
   end
 end
 
-# The difference from the code as we used in bike is: a schedule method, that returns the schedul eobject or creates a new one. By doing this, the instigating object doesn't need to pass in a schedule, and therefore needs no knowledge of Schedule, thus decoupling it. The dependency on Schedule has been moved now into the Schedulable module, isolating it even further.
+# The difference from the code as we used in bike is: a schedule method, that returns the schedule object or creates a new one. By doing this, the instigating object doesn't need to pass in a schedule, and therefore needs no knowledge of Schedule, thus decoupling it. The dependency on Schedule has been moved now into the Schedulable module, isolating it even further.
 
 # We've also added the lead_time method, with a generic default that we expect to be overriden by includers, similar to how you would frame the problem using the classical inheritance technique.
 
