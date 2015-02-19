@@ -89,7 +89,7 @@ end
 
 # It won't have a valid size, chain or tire size because it doesn't do the call to super on initialize.
 
-# Also, because it didn't send super in it's spares method, you'll be missing the tire and chain spares it needs. If you don't catch this in time, the Mechanic will be calling you when the brike is broken down in the rain and he doesn't have the right kit.
+# Also, because it didn't send super in it's spares method, you'll be missing the tire and chain spares it needs. If you don't catch this in time, the Mechanic will be calling you when the bike is broken down in the rain and he doesn't have the right kit.
 
 bent = RecumbentBike.new(flag: "Tall and Orange")
 p bent.spares # =>{:flag=>"Tall and Orange"}
