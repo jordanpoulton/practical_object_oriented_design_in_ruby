@@ -21,7 +21,7 @@
 
 # Here, the customer sends a message to trips, asking for a list of suitable trips, passing information about the date, the difficulty and whether he needs a bike or not.
 
-# But, immediately this looks fishy. The Trip is responsible for getting a bike to the customer, and it's not obvious, or even very reasonably, to expect the trip receiver to respond to this message.
+# But, immediately this looks fishy. The Trip is responsible for getting a bike to the customer, and it's not obvious, or even very reasonable, to expect the trip receiver to respond to this message.
 
 # This transition from CLASS BASED design to MESSAGE BASED DESIGN is critical.
 
@@ -66,13 +66,13 @@
                                         |   clean_bikes etc  |
 |--------|                              |                   \|/                |--------|
 |Mechanic|---------------------------------------------------------------------|Mechanic|
-|--------|                           ^                           |               |--------|
+|--------|                           ^                           |             |--------|
                                      |                           |
        bikes___    prepare_bike(bike)|                           |*returns a Bike
            |   |                     |                           |
-|--------| |  \ /    |-------------| |                          \|/               |--------|
-|  Trip  |-----------|for each bike|----------------------------------------------| Trip   |
-|--------|           |-------------|                                              |--------|
+|--------| |  \ /    |-------------| |                          \|/             |--------|
+|  Trip  |-----------|for each bike|--------------------------------------------| Trip   |
+|--------|           |-------------|                                            |--------|
 
 
 # Now the HOW of preparing a bicycle has been ceded to Mechanic.
