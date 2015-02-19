@@ -1,4 +1,4 @@
-# We now have a Bike, which has Parts, which has a collection of Part objects, and a PartsFactory, and a coniguration array for road and mountain bikes.
+# We now have a Bike, which has Parts, which has a collection of Part objects, and a PartsFactory, and a configuration array for road and mountain bikes.
 
 # The next ~60 lines of code replace the inheritance hierarchy from Chapter 6 with the composed object Bike.
 
