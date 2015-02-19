@@ -3,7 +3,7 @@
 # You define easy to change as:
 
 # Changes have no unexpected side effects
-# Small changes in reuirements require correspondingly small changes in code
+# Small changes in requirements require correspondingly small changes in code
 # Existing code is easy to reuse
 # The easiest way to make a change is to add code that in itself is easy to change
 
@@ -34,7 +34,7 @@ puts ratio # => 1.1
 # Easy gear - one turn of your feet outputs just over 1 turn of the rear wheel
 
 # If you wanted to model this interaction, you look for the NOUNS and find BiCYCLES and GEARS.
-# BUT - there is no behavious defined for a bicycle yet, so we just start with the Gear class
+# BUT - there is no behaviour defined for a bicycle yet, so we just start with the Gear class
 
 class Gear
   attr_reader :chainring, :cog
@@ -51,5 +51,4 @@ end
 puts Gear.new(52, 11).ratio
 puts Gear.new(30, 27).ratio
 
-# But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio
 # But what about if we have a new requirement that the size of the wheel is taken into account in our equation? You would need to calculate 'Gear Inches', which is the product of wheel diameter (rim diameter + 2 * tire diameter) and the gear ratio. How would you code this?
