@@ -5,7 +5,7 @@ class Parts
   def_delegators :@parts, :size, :each
   include Enumerable
 
-  # Forwardable means that the object specified in 'def_delegators - @parts, will have the size and each methods delegated to that object'
+  # Forwardable means that the object specified in 'def_delegators' - @parts, will have the size and each methods delegated to that object'
 
   # Including Enumerable now gives Array-like behavious to the parts object
 
